@@ -1,5 +1,7 @@
 package br.com.pasquantonio.entregamercadoria.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,10 +16,20 @@ public class Graph {
 	private Long id;
 	
 	@Column(nullable=false)
-	private String nome;
+	private String name;
 	
 	@OneToMany(targetEntity=GraphPath.class)
-	private GraphPath graphPath;
+	private List<GraphPath> graphPath;
+
+
+	public List<GraphPath> getGraphPath() {
+		return graphPath;
+	}
+
+
+	public void setGraphPath(List<GraphPath> graphPath) {
+		this.graphPath = graphPath;
+	}
 
 
 	public Long getId() {
@@ -31,12 +43,12 @@ public class Graph {
 
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.name = nome;
 	}
 
 
