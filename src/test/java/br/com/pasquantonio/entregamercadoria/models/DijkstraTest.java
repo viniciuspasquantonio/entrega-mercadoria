@@ -1,4 +1,4 @@
-package br.com.pasquantonio.entregamercadoriamodels;
+package br.com.pasquantonio.entregamercadoria.models;
 
 import java.util.List;
 
